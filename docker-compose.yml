@@ -10,5 +10,8 @@ services:
       - .:/usr/src/app
       - gem_cache:/gems
 
+  redis:
+     image: redis
+
 volumes:
   gem_cache:
