@@ -20,3 +20,12 @@ require("chart.js")
 
 import "chartkick"
 import "chart.js"
+
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+
+
+// import 'bootstrap';
+// import "../stylesheets/application";
+
+require("bootstrap/dist/js/bootstrap")

@@ -1,9 +1,83 @@
     <%= javascript_pack_tag 'hello_react' %>
     <h1>React App</h1>
 
-    <%= line_chart(:a => 3, :b => 2, :c => 5) %>
+
+    <div class="alert alert-primary" role="alert">
+        Um simples alerta primary. Olha só!
+    </div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+      <html>
+  <div>
+    <head>
     
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
-    teste
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', ''],
+          ['1', <%=  @rtts_[0] %> ],
+          ['2', <%=  @rtts_[1] %> ],
+          ['3',  <%=  @rtts_[2] %> ],
+          ['4',  <%=  @rtts_[3] %> ]
+        ]);
 
-    <%= line_chart(@rtts_) %>
+         var options = {
+          title: '',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+  </body>
+
+
+</div>
+afda
+adfaf
+adfafd
+<div>
+
+    
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', ''],
+          ['1', <%=  @rtts_1[0] %> ],
+          ['2', <%=  @rtts_1[1] %> ],
+          ['3',  <%=  @rtts_1[2] %> ],
+          ['4',  <%=  @rtts_1[3] %> ]
+        ]);
+
+         var options = {
+          title: '',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+  </body>
+
+
+</div>
+</html>

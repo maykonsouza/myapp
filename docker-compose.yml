@@ -2,18 +2,7 @@ version: '3'
     
 services:
 
-  web:
-    build: .
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/usr/src/app
-      - gem_cache:/gems
-    env_file:
-      - .env/development/database
-      - .env/development/web
-    environment: 
-      - WEBPACKER_DEV_SERVER_HOST=wekpack_dev_server
+
 
   webpack_dev_server:
     build: .
@@ -38,6 +27,19 @@ services:
       - .env/development/database
     volumes:
       - db_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - gem_cache:/gems
+    env_file:
+      - .env/development/database
+      - .env/development/web
+    environment: 
+      - WEBPACKER_DEV_SERVER_HOST=wekpack_dev_server
 
 volumes:
   db_data:

@@ -17,6 +17,23 @@ class WelcomeController < ApplicationController
 
     @rtts_=rtts
 
+    address = "www.google.com"
+    rtts = []
+    for i in 1..5
+      result = `ping -c 3 #{address} | tail -1| awk '{print $4}' | cut -d '/' -f 2`.to_i
+      rtts.push(result)
+    end
+    @latence = rtts.sum/rtts.length
+
+    @rtts_1=rtts
+
     
+
+    
+    
+
+
+
+
   end
 end
