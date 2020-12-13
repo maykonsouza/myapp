@@ -5,11 +5,68 @@
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
         <%= line_chart(:a => 3, :b => 2, :c => 5) %>
 
-        <%= line_chart(:a => 100, :b => 101, :c => 90) %>
+        <%= line_chart(@data) %>
         <%#= line_chart(a: 3, b: 2, c: 5) %>
 
         <%#= line_chart(:a => @rtts_[0], :b => @rtts_[1], :c => @rtts_[2], :d => @rtts_[3], :e => @rtts_[4]) %>
     
+
+    <div class="container-fluid">
+    <%= line_chart(@data) %>
+    <%= line_chart(@data) %>
+    </div>
+
+   <div class="container">
+        <div class="row">
+            <div class="col"><%= line_chart(@data) %></div>
+            <div class="col"><%= line_chart(@data) %></div>
+            <div class="w-100"></div>
+            <div class="col"><%= line_chart(@data) %></div>
+            <div class="col"><%= line_chart(@data) %></div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+            <%= line_chart(@data) %>
+            </div>
+            <div class="col-sm">
+            <%= line_chart(@data) %>
+            </div>
+            <div class="col-sm">
+            <%= line_chart(@data) %>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+       <p> <%=@data1[1]%> </p>
+        <%= line_chart(@data1[0]) %>
+        <p>Latência: <%=@data1[2]%>ms</p>
+    </div>
+    <div class="col">
+      2 de 2 <%= line_chart(@data2) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 de 3 <%= line_chart(@data3) %>
+    </div>
+    <div class="col">
+      2 de 3 <%= line_chart(@data4) %>
+    </div>
+    <div class="col">
+      3 de 3 <%= line_chart(@data1) %>
+    </div>
+  </div>
+</div>
+
+
+
 
     teste
 
