@@ -20,6 +20,9 @@ services:
     image: postgres:9.6
     env_file:
       - .env/development/database
+    volumes:
+      - db_data:/var/lib/postgresql/data
 
 volumes:
+  db_data:
   gem_cache:
