@@ -21,6 +21,7 @@ Bundler.require(*Rails.groups)
 
 module Myapp
   class Application < Rails::Application
+    config.web_console.whitelisted_ips = "172.19.0.0/16"
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 

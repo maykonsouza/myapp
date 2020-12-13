@@ -12,5 +12,11 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-const chartkick = require("chartkick")
-const chart = require("chart.js")
+require("chartkick")
+require("chart.js")
+
+// const chartkick = require("chartkick")
+// const chart = require("chart.js")
+
+import "chartkick"
+import "chart.js"

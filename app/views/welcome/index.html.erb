@@ -1,3 +1,12 @@
 <h1>Welcome#index</h1>
     <h2>This page has been viewed <%= pluralize(@page_hits, 'time') %>!</h2>
     <p>Find me in app/views/welcome/index.html.erb</p>
+
+        <%= line_chart(:a => 3, :b => 2, :c => 5) %>
+
+        <%= line_chart({"a" => 3, "b" => 2, "c" => 5}) %>
+    
+
+    teste
+
+    <%#= line_chart(@rtts_) %>
