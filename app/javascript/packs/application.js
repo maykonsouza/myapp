@@ -11,3 +11,6 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+const chartkick = require("chartkick")
+const chart = require("chart.js")
